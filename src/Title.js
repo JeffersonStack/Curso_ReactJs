@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 
 export default class Title extends Component {
+  handleClick() {
+    console.log("Clickou no texto");
+  }
+
   render() {
-    return <h1>Hello, {(this.props.name, this.props.soma)}</h1>;
+    return (
+      <div>
+        <button onClick={this.handleClick}>Clique</button>
+      </div>
+    );
   }
 }
