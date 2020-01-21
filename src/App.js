@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "./Button";
+import MudandoState from "./MudandoState";
 
 function App() {
   return (
     <div className="App">
-      <Button />
+      <MudandoState />
     </div>
   );
 }
