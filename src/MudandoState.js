@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 
 export default class MudandoState extends Component {
-  constructor() {
-    super();
-    this.handleChange = this.handleChange.bind(this);
+  constructor(props) {
+    super(props);
     this.state = {
       text: "Jefferson"
     };
   }
 
-  handleChange(e) {
-    this.setState({ text: "Anderson" });
-  }
+  handleChange = () => this.setState({ text: "Anderson" });
 
   render() {
-    return <h1 onClick={this.handleChange}>{this.state.text}</h1>;
+    return (
+      <div>
+        <h1>{this.state.text}</h1>
+        <button onClick={this.handleChange}>Mudar Nome</button>
+      </div>
+    );
   }
 }

@@ -1,12 +1,21 @@
-import React from "react";
-import MudandoState from "./MudandoState";
+import React, { Component } from "react";
+import Square from "./Square";
 
-function App() {
-  return (
-    <div className="App">
-      <MudandoState />
-    </div>
-  );
+// import { Container } from './styles';
+
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      color: "red"
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <Square color={this.state.color} />
+      </div>
+    );
+  }
 }
-
-export default App;
